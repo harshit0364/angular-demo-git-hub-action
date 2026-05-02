@@ -8,7 +8,6 @@
     "build": "ng build --configuration production",
     "build:dev": "ng build --configuration development",
     "test": "ng test --watch=false",
-    "lint": "ng lint",
     "serve": "ng serve --open"
   },
   "private": true,
