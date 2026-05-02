@@ -51,4 +51,7 @@ export class HomeComponent {
     }
     return 'Production Environment';
   }
+   getCurrentHost(): string {
+    return window.location.host;
+  }
 }
