@@ -1,0 +1,30 @@
+<div class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Angular Demo</h1>
+    <p>Multi-Environment Deployment with GitHub Actions & Azure Cloud</p>
+    <div class="cta-buttons">
+      <button class="btn btn-primary">Get Started</button>
+      <button class="btn btn-secondary">Learn More</button>
+    </div>
+  </div>
+</div>
+
+<section class="features">
+  <h2>Key Features</h2>
+  <div class="features-grid">
+    <div *ngFor="let feature of features" class="feature-card">
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.description }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="deployment-info">
+  <h2>Deployment Information</h2>
+  <div class="info-card">
+    <p><strong>Environment:</strong> {{ deploymentInfo.environment }}</p>
+    <p><strong>Deployed:</strong> {{ deploymentInfo.timestamp | date: 'medium' }}</p>
+    <p><strong>API Version:</strong> {{ deploymentInfo.apiVersion }}</p>
+    <p><strong>Current Host:</strong> {{ getCurrentHost() }}</p>
+  </div>
+</section>

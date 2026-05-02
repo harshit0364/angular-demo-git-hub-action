@@ -1,0 +1,25 @@
+azure:
+  serviceName: "angular-demo"
+  resourceGroup: "angular-demo-${ENVIRONMENT}-rg"
+
+metadata:
+  template: "Angular SPA with GitHub Actions & Azure Static Web Apps"
+
+services:
+  web:
+    project: "."
+    language: "javascript"
+    host: "staticwebapp"
+    framework: "angular"
+
+env:
+  - name: ENVIRONMENT
+    defaultValue: dev
+
+hooks:
+  build:
+    shell: pwsh
+    run: npm ci && npm run build
+  postdeploy:
+    shell: bash
+    run: echo "Angular demo deployed successfully!"

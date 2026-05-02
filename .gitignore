@@ -1,0 +1,28 @@
+node_modules/
+dist/
+out-tsc/
+.angular/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Dependencies
+npm-debug.log
+yarn-error.log
+
+# Testing
+coverage/
+*.lcov
+
+# Build artifacts
+*.js.map
+*.ts.map
