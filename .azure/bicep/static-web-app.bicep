@@ -28,14 +28,6 @@ resource staticWebApp 'Microsoft.Web/staticSites@2023-01-01' = {
     tier: skuTier
   }
   properties: {
-    repositoryUrl: 'https://github.com/yourusername/angular-demo'
-    branch: environment == 'stage' ? 'release' : 'main'
-    buildProperties: {
-      appLocation: '/'
-      outputLocation: 'dist/angular-demo'
-      appBuildCommand: 'npm run build'
-      skipGithubActionWorkflowGeneration: true
-    }
     publicNetworkAccess: 'Enabled'
   }
 }
