@@ -27,6 +27,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Build application
+      run: npm run build
+
     - name: Azure Login
       uses: azure/login@v2
       with:
@@ -39,8 +42,8 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: 'upload'
         app_location: 'dist/angular-demo'
-        output_location: 'dist/angular-demo'
-        app_build_command: 'npm run build'
+        api_location: ''
+        skip_app_build: true
 
     - name: Print deployment summary
       run: |
