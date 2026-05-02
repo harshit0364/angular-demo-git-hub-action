@@ -68,6 +68,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+          "browserTarget": "angular-demo:build:development"
+          },
           "configurations": {
             "production": {
               "browserTarget": "angular-demo:build:production"
@@ -104,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0e7b57a3-c4b4-46db-bb50-91367395e9d8"
   }
 }
