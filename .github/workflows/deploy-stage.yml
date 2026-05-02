@@ -44,8 +44,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         action: 'upload'
         app_location: 'dist/angular-demo'
-        output_location: 'dist/angular-demo'
-        app_build_command: 'npm run build'
+        output_location: ''
         skip_app_build: true
 
     - name: Print deployment summary
